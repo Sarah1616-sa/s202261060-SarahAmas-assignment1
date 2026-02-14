@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO meta tags for search engines -->
+    <meta name="description" content="Sarah Bassam Almas - Software Engineering Student Portfolio">
+    <meta name="keywords" content="Software Engineering, KFUPM, Portfolio, Developer, UI/UX">
+
+    <title>Sarah Almas | Software Engineering Portfolio</title>
+
+    <!-- Main stylesheet with responsive design and theme support -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!--
+        NAVIGATION BAR
+        - Fixed position at top of page
+        - Contains logo, navigation links, theme toggle, and mobile menu button
+        - Responsive: collapses to hamburger menu on mobile devices
+    -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">SA</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon-sun">&#9728;</span>
+                    <span class="theme-icon-moon">&#9790;</span>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!--
+        HERO SECTION
+        - Landing section with animated background shapes
+        - Contains avatar, name, typing effect tagline, and CTA buttons
+        - Typing effect cycles through different roles (JS-powered)
+        - Scroll indicator at bottom guides users to content below
+    -->
+    <header class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <span>SA</span>
+            </div>
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Sarah Bassam Almas</h1>
+            <p class="hero-tagline">
+                <span class="typing-text" id="typingText"></span>
+                <span class="typing-cursor">|</span>
+            </p>
+            <p class="hero-description">
+                Building innovative, user-centered solutions with a passion for technology and design.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll Down</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </header>
+
+    <!--
+        ABOUT SECTION
+        - Personal introduction with profile placeholder
+        - Displays location, education, and email info
+        - Uses data-aos attributes for scroll animations
+        - Grid layout: image on left, text on right (stacks on mobile)
+    -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <div class="profile-placeholder">
+                            <span>SA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Software Engineering Student</h3>
+                    <p>I am a motivated Software Engineering undergraduate at <strong>King Fahd University of Petroleum and Minerals (KFUPM)</strong> with strong interests in Artificial Intelligence, user-centered system design, and data-driven applications.</p>
+                    <p>Experienced in academic projects using Python, C#, JavaFX, and Figma, with growing research and technical communication skills. I am passionate about applying technical knowledge to contribute to innovative solutions that make a real impact.</p>
+
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-icon">&#128205;</span>
+                            <div>
+                                <strong>Location</strong>
+                                <span>Dhahran, Saudi Arabia</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">&#127891;</span>
+                            <div>
+                                <strong>Education</strong>
+                                <span>B.S. Software Engineering, KFUPM</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">&#128231;</span>
+                            <div>
+                                <strong>Email</strong>
+                                <span>Almas.Sarah@outlook.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        SKILLS SECTION
+        - Displays technical skills in categorized groups
+        - Three categories: Programming Languages, Design & Prototyping, Other Skills
+        - Uses CSS Grid for responsive card layout
+        - Each skill has an icon box with abbreviation and skill name
+    -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+
+            <div class="skills-container">
+                <div class="skills-category" data-aos="fade-up">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon-box">
+                                <span>Py</span>
+                            </div>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon-box">
+                                <span>Jv</span>
+                            </div>
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon-box">
+                                <span>C#</span>
+                            </div>
+                            <span class="skill-name">C Sharp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Design & Prototyping</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon-box">
+                                <span>Fg</span>
+                            </div>
+                            <span class="skill-name">Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon-box">
+                                <span>UX</span>
+                            </div>
+                            <span class="skill-name">UI/UX Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon-box">
+                                <span>Pt</span>
+                            </div>
+                            <span class="skill-name">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Other Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon-box">
+                                <span>AI</span>
+                            </div>
+                            <span class="skill-name">AI Fundamentals</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon-box">
+                                <span>Ms</span>
+                            </div>
+                            <span class="skill-name">MS Office</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon-box">
+                                <span>Rw</span>
+                            </div>
+                            <span class="skill-name">Technical Writing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        EXPERIENCE & EDUCATION SECTION
+        - Timeline-style layout for education and work experience
+        - Two-column grid: Education on left, Experience on right
+        - Includes certifications grid at the bottom
+        - Timeline uses CSS pseudo-elements for visual line and dots
+    -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Experience & Education</h2>
+
+            <div class="timeline-container">
+                <!-- Education Timeline -->
+                <div class="timeline-section" data-aos="fade-right">
+                    <h3 class="timeline-heading">
+                        <span class="timeline-icon">&#127891;</span>
+                        Education
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022 - Present</span>
+                                <h4>Bachelor of Software Engineering</h4>
+                                <p class="timeline-place">King Fahd University of Petroleum and Minerals (KFUPM)</p>
+                                <p>Studying software engineering with focus on AI, system design, and data-driven applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Timeline -->
+                <div class="timeline-section" data-aos="fade-left">
+                    <h3 class="timeline-heading">
+                        <span class="timeline-icon">&#128188;</span>
+                        Experience
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024 - Present</span>
+                                <h4>Computer Club Member</h4>
+                                <p class="timeline-place">KFUPM</p>
+                                <p>Actively participating in technical initiatives and club events focused on programming skills and technology awareness.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Feb - Mar 2025</span>
+                                <h4>Atad Program Training</h4>
+                                <p class="timeline-place">Professional Development</p>
+                                <p>Completed 15 training hours covering personal branding, professional communication, and interview excellence.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2024 - 2025</span>
+                                <h4>Volunteer</h4>
+                                <p class="timeline-place">KFUPM</p>
+                                <p>Over 20 volunteering hours in university community initiatives and event support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications" data-aos="fade-up">
+                <h3 class="timeline-heading">
+                    <span class="timeline-icon">&#127942;</span>
+                    Certifications & Training
+                </h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">&#128196;</div>
+                        <h4>Microsoft Office Specialist (MOS)</h4>
+                        <p>60 Hours - Feb-Apr 2024</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">&#129302;</div>
+                        <h4>Generative AI for Software Development</h4>
+                        <p>IBM SkillsBuild - 20 Hours</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">&#128202;</div>
+                        <h4>Generative AI for Data Insights</h4>
+                        <p>IBM SkillsBuild - 20 Hours</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">&#128640;</div>
+                        <h4>McKinsey Forward Program</h4>
+                        <p>Problem-solving & Digital Tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        PROJECTS SECTION
+        - Showcases 6 projects with placeholder images
+        - First project (Hackathon) is featured and spans 2 columns on desktop
+        - Each card has gradient background, title, description, and tech tags
+        - Hover effects: card lifts up, image zooms slightly
+    -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+            <p class="section-subtitle">A selection of my recent work and achievements</p>
+
+            <div class="projects-grid">
+                <!-- Featured Project -->
+                <article class="project-card featured" data-aos="fade-up">
+                    <div class="project-badge">Featured</div>
+                    <div class="project-image">
+                        <div class="placeholder-image gradient-1">
+                            <span>&#128640;</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Innovation Path Hackathon 2025</h3>
+                        <p>Participated in the Innovation Path Hackathon 2025, collaborating with a team to develop innovative solutions addressing real-world challenges through technology and creative problem-solving.</p>
+                        <div class="project-tags">
+                            <span class="tag">Hackathon</span>
+                            <span class="tag">Innovation</span>
+                            <span class="tag">Teamwork</span>
+                            <span class="tag">2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="placeholder-image gradient-2">
+                            <span>&#127891;</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Student Course Registration System</h3>
+                        <p>A comprehensive Python-based system for managing student course enrollment, featuring user authentication and enrollment tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="placeholder-image gradient-3">
+                            <span>&#127915;</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Event Ticket Reservation System</h3>
+                        <p>A JavaFX application featuring an event booking system with separate admin and user roles for complete event management.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaFX</span>
+                            <span class="tag">Full-Stack</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="placeholder-image gradient-4">
+                            <span>&#129309;</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>KFUPM Volunteering Platform</h3>
+                        <p>A Figma prototype designed to connect students with volunteering opportunities, featuring registration and participation tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <div class="placeholder-image gradient-5">
+                            <span>&#128506;</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>University Map & Building System</h3>
+                        <p>C# application displaying building locations, distances, and capacity information for KFUPM campus navigation.</p>
+                        <div class="project-tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">Desktop App</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <div class="placeholder-image gradient-6">
+                            <span>&#128218;</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Student Tutoring Platform</h3>
+                        <p>UI/UX prototype for a peer tutoring system, connecting students who need help with tutors in various subjects.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Prototype</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        CONTACT SECTION
+        - Contains contact information and a contact form
+        - Form has Name, Email, Subject, and Message fields
+        - Form validation handled by JavaScript (no backend required)
+        - Shows success/error notifications on submission
+    -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <p class="section-subtitle">Have a question or want to work together? Feel free to reach out!</p>
+
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Connect</h3>
+                    <p>I'm currently looking for internship opportunities and exciting projects to work on. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128231;</div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>Almas.Sarah@outlook.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128205;</div>
+                            <div>
+                                <strong>Location</strong>
+                                <span>Dhahran, Saudi Arabia</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#127891;</div>
+                            <div>
+                                <strong>University</strong>
+                                <span>KFUPM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" data-aos="fade-left">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What is this about?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span>Send Message</span>
+                        <span class="btn-icon">&#10148;</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        FOOTER
+        - Contains brand info, quick navigation links
+        - Copyright notice at bottom
+        - Responsive: stacks on mobile devices
+    -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">SA</span>
+                    <p>Software Engineering Student at KFUPM, passionate about building innovative solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sarah Bassam Almas. All rights reserved.</p>
+                <p>Designed & Built with passion</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--
+        SCROLL TO TOP BUTTON
+        - Fixed position button that appears when user scrolls down
+        - Clicking smoothly scrolls page back to top
+        - Visibility controlled by JavaScript based on scroll position
+    -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <span>&#8593;</span>
+    </button>
+
+    <!-- Main JavaScript file - handles all interactive features -->
+    <script src="js/script.js"></script>
+</body>
+</html>
